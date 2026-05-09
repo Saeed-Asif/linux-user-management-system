@@ -1,13 +1,12 @@
 #!/bin/bash
 
-Name="User-Management" 
-echo "Welcome to $Name"
+# Root validation
+if [ "$EUID" -ne 0 ]
+then
+    echo "Please run as root"
+    exit 1
+fi
 
-User="Saeed"
-name(){
-
- echo "Welcome $1"
-
-}
-
-name Waheed
+echo "=================================="
+echo " User Management & Backup System "
+echo "=================================="
