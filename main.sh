@@ -96,10 +96,13 @@ do
 	    fi
 	    ;;
         3)
-            echo "List Users selected"
-            log_message "Selected List Users"
-            ;;
+     
+	    echo "===== System Users ====="
+ 
+	    awk -F: '$3 >= 1000 && $3 < 60000 {print $1}' /etc/passwd
 
+	    log_message "Listed system users"
+	    ;;     
         4)
             echo "Backup Directory selected"
             log_message "Selected Backup Directory"
