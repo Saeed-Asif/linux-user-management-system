@@ -90,4 +90,3 @@ This project is built for:
 ## 👨‍💻 Author
 
 Saeed Asif
-DevOps 
