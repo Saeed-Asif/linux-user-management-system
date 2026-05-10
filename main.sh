@@ -55,10 +55,46 @@ do
             ;;
 
         2)
-            echo "Delete User selected"
-            log_message "Selected Delete User"
-            ;;
 
+	    read -p "Enter username to delete: " username
+
+	    # Check if user exists
+	    if ! id "$username" &>/dev/null
+	    then
+	        echo "User does not exist."
+	        log_message "Delete failed: $username does not exist"
+
+	    else
+	        # Safety check: prevent root deletion
+	        if [ "$username" == "root" ]
+	        then
+	            echo "Cannot delete root user!"
+	            log_message "Attempted root deletion blocked"
+	        else
+
+	            # Confirmation step (VERY IMPORTANT)
+	            read -p "Are you sure you want to delete $username? (y/n): " confirm
+
+	            if [ "$confirm" == "y" ]
+	            then
+	                userdel -r "$username"
+
+	                if [ $? -eq 0 ]
+	                then
+	                    echo "User deleted successfully."
+	                    log_message "User deleted: $username"
+	                else
+	                    echo "Failed to delete user."
+	                    log_message "Delete failed for: $username"
+	                fi
+
+	            else
+	                echo "Deletion cancelled."
+	                log_message "Deletion cancelled for: $username"
+	            fi
+	        fi
+	    fi
+	    ;;
         3)
             echo "List Users selected"
             log_message "Selected List Users"
