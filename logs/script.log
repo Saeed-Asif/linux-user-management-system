@@ -1,38 +1,4 @@
-2026-05-10 10:28:11 : Selected Backup Directory
-2026-05-10 10:28:26 : Selected Backup Directory
-2026-05-10 10:28:27 : Selected Delete User
-2026-05-10 10:28:29 : Selected Create User
-2026-05-10 10:28:30 : Script exited
-2026-05-10 10:28:35 : Selected List Users
-2026-05-10 10:28:37 : Invalid menu option entered
-2026-05-10 10:28:40 : Selected Backup Directory
-2026-05-10 10:28:43 : Script exited
-2026-05-10 11:06:27 : Failed to create user: saeed-asif already exists
-2026-05-10 11:06:33 : Failed to create user: saeed
-2026-05-10 11:06:45 : User created: waheed
-2026-05-10 11:06:51 : Selected Delete User
-2026-05-10 11:06:57 : Script exited
-2026-05-10 11:39:50 : User deleted: waheed
-2026-05-10 11:40:09 : User created: waheed
-2026-05-10 11:40:19 : User deleted: waheed
-2026-05-10 11:40:22 : Invalid menu option entered
-2026-05-10 11:40:25 : Script exited
-2026-05-10 12:20:41 : User created: waheed
-2026-05-10 12:20:43 : Script exited
-2026-05-10 16:32:13 : Listed system users
-2026-05-10 16:33:17 : Invalid menu option entered
-2026-05-10 16:33:19 : Script exited
-2026-05-10 16:34:06 : Listed system users
-2026-05-10 16:35:57 : Listed system users
-2026-05-10 16:36:01 : Invalid menu option entered
-2026-05-10 16:36:03 : Listed system users
-2026-05-10 16:36:28 : Delete failed: cut -d: -f1 /etc/passwd does not exist
-2026-05-10 16:36:36 : Script exited
-2026-05-10 16:36:42 : Listed system users
-2026-05-10 16:36:50 : Delete failed for: nexus
-2026-05-10 16:36:50 : Invalid menu option entered
-2026-05-10 16:36:57 : Delete failed: 22 does not exist
-2026-05-10 16:37:00 : Listed system users
-2026-05-10 16:37:17 : User deleted: waheed
-2026-05-10 16:37:21 : Listed system users
-2026-05-10 16:37:39 : Script exited
+2026-05-16 17:14:02 : Listed system users
+2026-05-16 17:14:12 : User deleted: nexus
+2026-05-16 17:14:15 : Listed system users
+2026-05-16 17:14:17 : Script exited
