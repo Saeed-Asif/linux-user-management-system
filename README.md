@@ -46,21 +46,19 @@ It is designed for **DevOps beginners** to practice:
 ## 🧩 Architecture (Module Design)
 
 ### System Flow
-
 User Input (CLI Menu)
-        ↓
+↓
 main.sh (Controller)
-        ↓
+↓
 Module Functions
-        ↓
+↓
 System Operations (User/Backup)
-        ↓
+↓
 Logs stored in logs/script.log
 
 ---
 
 ### Modules
-
 - main.sh → CLI interface & controller
 - modules/user_mgmt.sh → user operations
 - modules/backup.sh → backup operations
@@ -70,6 +68,7 @@ Logs stored in logs/script.log
 
 ## 📁 Project Structure
 
+```
 user-management-backup-system/
 │
 ├── main.sh
@@ -83,57 +82,86 @@ user-management-backup-system/
 ├── backups/
 │
 └── README.md
+```
 
 ---
 
 ## ▶️ How to Run
 
-### Give permission
+### Give execute permission
 ```bash
 chmod +x main.sh
-Run script (requires root)
+```
+
+### Run script (requires root)
+```bash
 sudo ./main.sh
-📜 Menu Options
-Create User
-Delete User
-List Users
-Backup Directory
-Exit
-📝 Logging System
+```
+
+---
+
+## 📜 Menu Options
+
+1. Create User
+2. Delete User
+3. List Users
+4. Backup Directory
+5. Exit
+
+---
+
+## 📝 Logging System
 
 All actions are stored in:
 
+```
 logs/script.log
+```
 
-Example:
+Example log entries:
+```
 2026-05-10 12:30:45 : User created: testuser
 2026-05-10 12:32:10 : User deleted: testuser
+2026-05-10 12:35:00 : Backup completed: /home/user/documents
+```
 
-🔧 Technologies Used
-Bash Scripting
-Linux Commands
-User Management Tools
-tar & gzip compression
-Logging system design
-Modular scripting
-🧠 Learning Outcomes
-Linux user management
-Bash scripting fundamentals
-Automation thinking
-Logging systems
-Safe system design
-Modular architecture
-🔮 Future Improvements
-Cron automation for backups
-Email notifications
-Encrypted backups
-Role-based access system
-GUI version (advanced)
-👨‍💻 Author
+---
 
-Saeed Asif
+## 🔧 Technologies Used
+- Bash Shell Scripting
+- Linux System Commands
+- User Management (useradd, userdel)
+- tar & gzip compression
+- Logging system design
+- Modular scripting
+
+---
+
+## 🧠 Learning Outcomes
+- Linux user management fundamentals
+- Bash scripting structure and logic
+- Real-world DevOps automation patterns
+- Logging and monitoring systems
+- Safe system operation design
+- Modular scripting practices
+
+---
+
+## 🔮 Future Improvements
+- Cron-based automatic backups
+- Email notifications for backup status
+- Encrypted backups
+- Role-based user management
+- GUI version (optional advanced)
+
+---
+
+## 👨‍💻 Author
+Saeed Asif  
 LinkedIn: https://www.linkedin.com/in/saeedasif-devops/
 
-⚠️ Disclaimer
+---
 
-Use only in test environments or virtual machines.
+## ⚠️ Disclaimer
+This tool performs system-level operations. Use carefully and only in controlled environments or virtual machines.
+```
