@@ -2,3 +2,22 @@
 2026-05-16 17:14:12 : User deleted: nexus
 2026-05-16 17:14:15 : Listed system users
 2026-05-16 17:14:17 : Script exited
+2026-05-17 15:57:16 : Backup failed for ./
+2026-05-17 15:57:48 : Script exited
+2026-05-17 15:58:37 : Backup failed: invalid directory /backups
+2026-05-17 15:58:42 : Script exited
+2026-05-17 16:04:58 : Backup failed: invalid directory ~/devops-projects/user-management/backups
+2026-05-17 16:06:49 : Backup created: backup-2026-05-17-16-06-49.tar.gz from /home/saeed-asif/devops-projects/user-management/backups
+2026-05-17 16:09:33 : Script exited
+2026-05-17 16:10:16 : Backup failed for backups/
+2026-05-17 16:10:32 : Backup failed for ./backups
+2026-05-17 16:10:53 : Backup created: backup-2026-05-17-16-10-53.tar.gz from /home/saeed-asif/devops-projects/user-management/backups
+2026-05-17 16:22:23 : Script exited
+2026-05-17 16:26:52 : Blocked recursive backup attempt: ./backups
+2026-05-17 16:27:06 : Blocked recursive backup attempt: backups
+2026-05-17 16:27:34 : Backup created: backup-2026-05-17-16-27-34.tar.gz from /home/saeed-asif/devops-projects/
+2026-05-17 16:28:15 : Backup created: backup-2026-05-17-16-28-15.tar.gz from /home/saeed-asif/Devops
+2026-05-17 16:30:23 : Script exited
+2026-05-17 16:38:42 : Backup created: backup-2026-05-17-16-38-42.tar.gz from /home/saeed-asif/Devops
+2026-05-17 16:38:44 : Invalid menu option entered
+2026-05-17 16:38:46 : Script exited

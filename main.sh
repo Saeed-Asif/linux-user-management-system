@@ -104,10 +104,41 @@ do
 	    log_message "Listed system users"
 	    ;;     
         4)
-            echo "Backup Directory selected"
-            log_message "Selected Backup Directory"
-            ;;
+	
+	    read -p "Enter directory to backup: " dir
 
+	    # Expand ~ to home directory
+	    dir="${dir/#\~/$HOME}"
+
+	    # Check if directory exists
+	    if [ ! -d "$dir" ]; then
+	        echo "Directory does not exist!"
+	        log_message "Backup failed: invalid directory $dir"
+
+	    else
+	        # Prevent backing up backups directory itself
+	        if [[ "$dir" == *"backups"* ]]; then
+	            echo "Cannot backup the backups directory itself!"
+	            log_message "Blocked recursive backup attempt: $dir"
+
+	        else
+	            # Create timestamped backup name
+	            backup_name="backup-$(date '+%Y-%m-%d-%H-%M-%S').tar.gz"
+
+	            # Create backup
+	            tar -czf "backups/$backup_name" "$dir"
+
+	            # Check backup status
+	            if [ $? -eq 0 ]; then
+	                echo "Backup successful: $backup_name"
+	                log_message "Backup created: $backup_name from $dir"
+	            else
+	                echo "Backup failed!"
+	                log_message "Backup failed for $dir"
+	            fi
+	        fi
+	    fi
+	    ;;		
         5)
             echo "Exiting..."
             log_message "Script exited"
